@@ -1,4 +1,5 @@
 class HandOfCards:
+
     """
     A class to represent a hand of playing cards.
     Attributes:
@@ -12,18 +13,29 @@ class HandOfCards:
     __str__():
         Returns a string representation of the hand of cards.
     """
+
+
+
     def __init__(self, cards):
+
+
         """
         Initializes a HandOfCards instance.
 
         Args:
             cards (list): A list of card objects that make up the hand.
         """
+
+
         self.cards = cards
 
+
+
     def is_flush(self):
+        
         if len(self.cards) < 5:
             return False
+        
         first_suit = self.cards[0].get_suit()
         return all(card.get_suit() == first_suit for card in self.cards)
 
